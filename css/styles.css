@@ -295,11 +295,16 @@ body {
 .servicios {
   background-color: #0f1117;
   color: #ffffff;
-  padding: 100px 80px;
-  padding-bottom: 10px; 
+  padding: 100px 80px 20px;
+}
+
+.servicios-categoria:last-child {
+  margin-bottom: 0;
 }
 
 .servicios-header {
+  max-width: 1400px;
+  margin: 0 auto 50px;
   opacity: 0;
   transform: translateY(60px);
   transition: opacity 0.8s ease, transform 0.8s ease;
@@ -354,16 +359,127 @@ body {
   line-height: 1.6;
 }
 
-.servicios-grid {
+/* ===== Subtítulo Servicios ===== */
+.servicios-subtitulo {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 680px;
+  line-height: 1.7;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+/* ===== Banner Sectores ===== */
+.servicios-sectores {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px 32px;
+  margin: 0 auto 60px;
+  max-width: 1400px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.servicios-sectores.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sectores-label {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  white-space: nowrap;
+}
+
+.sectores-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sectores-list span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+}
+
+.sectores-list span i {
+  color: #e94560;
+  font-size: 0.85rem;
+}
+
+/* ===== Categorías de Servicios ===== */
+.servicios-categoria {
+  max-width: 1400px;
+  margin: 0 auto 56px;
   opacity: 0;
   transform: translateY(60px);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.servicios-grid.visible {
+.servicios-categoria.visible {
   opacity: 1;
   transform: translateY(0);
 }
+
+.categoria-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  border-left: 4px solid;
+}
+
+.cat-soldadura  { border-color: #e94560; background: rgba(233, 69, 96, 0.08); }
+.cat-electrica  { border-color: #3b82f6; background: rgba(59, 130, 246, 0.08); }
+.cat-plomeria   { border-color: #06b6d4; background: rgba(6, 182, 212, 0.08); }
+.cat-mantenimiento { border-color: #c9a84c; background: rgba(201, 168, 76, 0.08); }
+
+.categoria-header h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.cat-ico { font-size: 1.3rem; }
+
+.cat-soldadura    .cat-ico { color: #e94560; }
+.cat-electrica    .cat-ico { color: #3b82f6; }
+.cat-plomeria     .cat-ico { color: #06b6d4; }
+.cat-mantenimiento .cat-ico { color: #c9a84c; }
+
+/* ===== Iconos FA en tarjetas ===== */
+.servicio-icon-fa {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.card-soldadura    .servicio-icon-fa { color: #e94560; }
+.card-electrica    .servicio-icon-fa { color: #3b82f6; }
+.card-plomeria     .servicio-icon-fa { color: #06b6d4; }
+.card-mantenimiento .servicio-icon-fa { color: #c9a84c; }
+
+.card-soldadura    { border-top: 3px solid #e94560; }
+.card-electrica    { border-top: 3px solid #3b82f6; }
+.card-plomeria     { border-top: 3px solid #06b6d4; }
+.card-mantenimiento { border-top: 3px solid #c9a84c; }
 
 
 
@@ -371,10 +487,9 @@ body {
 
 /* ===== Sección Proyectos ===== */
 .proyectos {
-   background-color: #0f1117;
+  background-color: #0f1117;
   color: #ffffff;
-  padding: 100px 80px;
-  
+  padding: 60px 80px 100px;
 }
 
 .proyectos h2 {
@@ -506,6 +621,231 @@ body {
 
 
 
+
+/* ===== Sección Cotización ===== */
+.cotizacion {
+  background-color: #0b0d11;
+  color: #ffffff;
+  padding: 100px 80px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cotizacion-container {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.cotizacion-header {
+  margin-bottom: 52px;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.cotizacion-header.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cotizacion-header h2 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.cotizacion-header p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.7;
+}
+
+/* ---- Form ---- */
+.cotizacion-form {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.cotizacion-form.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.form-group label {
+  font-size: 0.78rem;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 500;
+}
+
+.req {
+  color: #e94560;
+}
+
+.form-hint {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form-group input,
+.form-group textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 15px 18px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: rgba(233, 69, 96, 0.6);
+  background: rgba(233, 69, 96, 0.04);
+}
+
+.form-group textarea {
+  min-height: 160px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* ---- Category pills ---- */
+.cat-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cat-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px 18px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.88rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.cat-pill i {
+  font-size: 0.85rem;
+}
+
+.cat-pill:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.cat-pill.selected {
+  background: rgba(233, 69, 96, 0.14);
+  border-color: #e94560;
+  color: #ffffff;
+}
+
+/* ---- Aviso WhatsApp ---- */
+.form-aviso {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-aviso .fa-whatsapp {
+  color: #25D366;
+  font-size: 1rem;
+}
+
+/* ---- Submit ---- */
+.form-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 17px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-submit .fa-whatsapp {
+  font-size: 1.4rem;
+  color: #25D366;
+}
+
+.form-submit:hover {
+  background: rgba(37, 211, 102, 0.12);
+  border-color: rgba(37, 211, 102, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ---- Responsive cotizacion ---- */
+@media (max-width: 768px) {
+  .cotizacion {
+    padding: 60px 24px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .cotizacion-header h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cotizacion {
+    padding: 40px 16px;
+  }
+
+  .cotizacion-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .cat-pill {
+    font-size: 0.82rem;
+    padding: 9px 14px;
+  }
+}
 
 /* ===== Sección Contacto ===== */
 .contacto {
@@ -663,13 +1003,49 @@ body {
 
 /* --------------------Contactanos --------------------- */
 
-@media (max-width: 768px),(max-width: 480px)  {
+@media (max-width: 768px) {
+  .contacto-container {
+    flex-direction: column;
+  }
+
   .contacto-right {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 0 auto;
     padding-right: 0;
+  }
+
+  .mapa-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contacto-mapa {
+    height: 260px;
+  }
+
+  .contacto-left {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .contacto-container {
+    flex-direction: column;
+  }
+
+  .contacto-right {
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .mapa-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contacto-mapa {
+    height: 220px;
   }
 
   .contacto-left {
@@ -753,13 +1129,29 @@ body {
   .servicios h2 {
     font-size: 1.8rem;
   }
-    .stat-card {
-  width: 90%;       
-  margin: 0 auto;   
+
+  .stat-card {
+    width: 90%;
+    margin: 0 auto;
   }
 
   .servicios-grid {
     grid-template-columns: 1fr;
+  }
+
+  .servicios-sectores {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 20px;
+    margin-bottom: 40px;
+  }
+
+  .servicios-categoria {
+    margin-bottom: 40px;
+  }
+
+  .categoria-header h3 {
+    font-size: 1.1rem;
   }
 }
 
@@ -770,6 +1162,15 @@ body {
 
   .servicios h2 {
     font-size: 1.4rem;
+  }
+
+  .servicios-subtitulo {
+    font-size: 0.88rem;
+  }
+
+  .sectores-list span {
+    font-size: 0.78rem;
+    padding: 5px 12px;
   }
 
   .servicio-card {
@@ -785,6 +1186,10 @@ body {
   }
 
   .servicio-icon {
+    font-size: 1.5rem;
+  }
+
+  .servicio-icon-fa {
     font-size: 1.5rem;
   }
 }
@@ -965,5 +1370,4 @@ body {
     font-size: 0.95rem;
     letter-spacing: 1px;
   }
-
 }
