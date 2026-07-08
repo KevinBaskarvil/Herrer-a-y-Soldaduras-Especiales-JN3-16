@@ -38,7 +38,7 @@ function changeSlide(direction) {
 
 function startAutoSlide() {
   if (autoSlide) clearInterval(autoSlide);
-  autoSlide = setInterval(() => changeSlide(1), 4000);
+  autoSlide = setInterval(() => changeSlide(1), 3000);
 }
 
 function stopAutoSlide() {
